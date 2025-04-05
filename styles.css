@@ -1,0 +1,76 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.theme-buttons {
+  margin: 20px 0;
+}
+
+.theme-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Theme variations */
+body.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f0f0f0;
+}
+
+body.dark-theme {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  --card-bg: #444444;
+}
+
+body.fun-theme {
+  --bg-color: #ff9ecd;
+  --text-color: #4a154b;
+  --card-bg: #ffd6eb;
+}
